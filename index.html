@@ -160,11 +160,11 @@
         </div>
       </div>
       <div class="formBx">
-        <form class="" action="index.html" method="post">
+        <form class="" name="google-sheet" method="post">
           <h3>Message Me</h3>
-          <input type="text" name="" placeholder="Name">
-          <input type="email" name="" placeholder="Email">
-          <textarea name="name" placeholder="Message"></textarea>
+          <input type="text" name="Name" placeholder="Name">
+          <input type="email" name="Email" placeholder="Email">
+          <textarea name="Message" placeholder="Message"></textarea>
           <input type="submit" name="" value="Send">
         </form>
       </div>
@@ -176,7 +176,19 @@
     </div>
 
     <script type="text/javascript" src="script.js">
-
     </script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwbaeMUoczYMl0jO7kYOu_7UekWNo0un6Umap3FSDc3dlp6suxt/exec'
+      const form = document.forms['google-sheet']
+
+      form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+      .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
   </body>
 </html>
