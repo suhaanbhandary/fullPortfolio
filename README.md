@@ -1,2 +1,3 @@
-# fullPortfolio
-# how to optimize it for andraoid,any one please help.
+# Portfolio
+# My first website build using html,css,js.
+# Responsive design.
