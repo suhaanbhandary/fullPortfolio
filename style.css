@@ -91,7 +91,7 @@ header.sticky ul li a{
   left: 0;
   top: 0;
   min-width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   object-fit: cover;
 }
 #name_text{
@@ -145,7 +145,7 @@ header.sticky ul li a{
 }
 .slider input[type = "radio"]{
   position: relative;
-  z-index: 1000;
+  z-index: 998;
   margin: 5px;
   margin-bottom: 40px;
   outline: none;
@@ -375,7 +375,7 @@ img{
 
 /* responise ness */
 
-@media(max-width:780px) {
+@media(max-width:870px) {
   header,header.sticky {
     padding: 20px 50px;
     z-index: 1000;
@@ -502,6 +502,9 @@ img{
 }
 .banner {
     padding: 150px 50px 100px;
+}
+.slider .banner img{
+  min-height: 100vh;
 }
 
 section {
